@@ -58,4 +58,8 @@ For the sake of this test, I have included my own `.env.local` file in the submi
 ## To Do
 
 Although authentication and sharing are working, I did not have time to implement the forking of a chat session.
-As it stands, anyone who has access to a chat can add messages to the original thread.
+As it stands, anyone who has access to a shared chat should be able to add messages to the original thread.
+
+Additionally:
+- Feedback buttons below GPT responses are non functional
+- Chat sessions cannot be renamed or deleted

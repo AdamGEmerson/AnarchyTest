@@ -13,7 +13,7 @@ interface MessageInterface {
 export default function Message({ message }: MessageInterface) {
   return (
     <div
-      className={`flex flex-col ${
+      className={`flex flex-col w-full ${
         message.is_response ? "justify-end" : "justify-start"
       }`}
       key={message.id}

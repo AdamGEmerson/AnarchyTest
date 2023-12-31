@@ -166,7 +166,9 @@ export default function ChatPanel({ sessionID }: { sessionID: string | null }) {
         )}
       </div>
       {sessionID ? sessionID : "No session selected"}
-      <div className={"flex-1 px-32 overflow-scroll gap-2 flex flex-col"}>
+      <div
+        className={"flex-1 px-32 overflow-scroll gap-2 flex flex-col w-full"}
+      >
         {messages.map((message) => (
           <Message message={message} key={message.id} />
         ))}
