@@ -55,7 +55,7 @@ npm run dev
 
 For the sake of this test, I have included my own `.env.local` file in the submission, although normally this would be omitted.
 
-## To Do
+## To Dos / Known Issues
 
 Although authentication and sharing are working, I did not have time to implement the forking of a chat session.
 As it stands, anyone who has access to a shared chat should be able to add messages to the original thread.
@@ -63,3 +63,4 @@ As it stands, anyone who has access to a shared chat should be able to add messa
 Additionally:
 - Feedback buttons below GPT responses are non functional
 - Chat sessions cannot be renamed or deleted
+- Responsiveness is not great / not tested. I should have spent more time on the mobile view but ended up fighting with Next more than I'd like to admit.
