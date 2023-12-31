@@ -1,5 +1,9 @@
 import { GeistSans } from 'geist/font/sans'
-import './globals.css'
+import '../globals.css'
+import SessionList from "@/components/SessionList";
+import AuthButton from "@/components/AuthButton";
+import {cookies} from "next/headers";
+import { createClientComponentClient } from '@supabase/auth-helpers-nextjs'
 
 const defaultUrl = process.env.VERCEL_URL
   ? `https://${process.env.VERCEL_URL}`
@@ -16,11 +20,18 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+
   return (
     <html lang="en" className={GeistSans.className}>
       <body className="bg-background text-foreground">
         <main className="min-h-screen flex flex-col items-center">
-          {children}
+          <div className="w-full flex flex-row items-center h-screen">
+            <div className="flex flex-col gap-8 w-1/6 justify-around h-full p-4 items-center">
+              <SessionList serverSessions={[]}/>
+              <AuthButton />
+            </div>
+            {children}
+          </div>
         </main>
       </body>
     </html>
